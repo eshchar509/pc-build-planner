@@ -1,0 +1,44 @@
+[
+  { "id": "cpu-ryzen5-5600", "category": "cpu", "brand": "AMD", "name": "Ryzen 5 5600", "price": 129, "socket": "AM4", "cores": 6, "tdpW": 65, "gamingScore": 62, "workScore": 52 },
+  { "id": "cpu-ryzen5-7600", "category": "cpu", "brand": "AMD", "name": "Ryzen 5 7600", "price": 199, "socket": "AM5", "cores": 6, "tdpW": 65, "gamingScore": 72, "workScore": 62 },
+  { "id": "cpu-ryzen7-7800x3d", "category": "cpu", "brand": "AMD", "name": "Ryzen 7 7800X3D", "price": 399, "socket": "AM5", "cores": 8, "tdpW": 120, "gamingScore": 95, "workScore": 75 },
+  { "id": "cpu-ryzen9-7950x", "category": "cpu", "brand": "AMD", "name": "Ryzen 9 7950X", "price": 549, "socket": "AM5", "cores": 16, "tdpW": 170, "gamingScore": 86, "workScore": 98 },
+  { "id": "cpu-i5-13400f", "category": "cpu", "brand": "Intel", "name": "Core i5-13400F", "price": 189, "socket": "LGA1700", "cores": 10, "tdpW": 65, "gamingScore": 66, "workScore": 70 },
+  { "id": "cpu-i7-14700k", "category": "cpu", "brand": "Intel", "name": "Core i7-14700K", "price": 409, "socket": "LGA1700", "cores": 20, "tdpW": 125, "gamingScore": 88, "workScore": 92 },
+
+  { "id": "mb-gigabyte-b550-aorus-elite-v2", "category": "motherboard", "brand": "Gigabyte", "name": "B550 AORUS ELITE V2", "price": 139, "socket": "AM4", "memoryType": "DDR4" },
+  { "id": "mb-gigabyte-b650m-ds3h", "category": "motherboard", "brand": "Gigabyte", "name": "B650M DS3H", "price": 129, "socket": "AM5", "memoryType": "DDR5" },
+  { "id": "mb-asus-tuf-b650-plus-wifi", "category": "motherboard", "brand": "ASUS", "name": "TUF Gaming B650-PLUS WIFI", "price": 199, "socket": "AM5", "memoryType": "DDR5" },
+  { "id": "mb-msi-mag-b650-tomahawk-wifi", "category": "motherboard", "brand": "MSI", "name": "MAG B650 TOMAHAWK WIFI", "price": 219, "socket": "AM5", "memoryType": "DDR5" },
+  { "id": "mb-msi-pro-b760-p-ddr4", "category": "motherboard", "brand": "MSI", "name": "PRO B760-P DDR4", "price": 119, "socket": "LGA1700", "memoryType": "DDR4" },
+  { "id": "mb-asus-prime-z790-p-wifi", "category": "motherboard", "brand": "ASUS", "name": "PRIME Z790-P WIFI", "price": 199, "socket": "LGA1700", "memoryType": "DDR5" },
+
+  { "id": "ram-corsair-vengeance-16-ddr4-3200", "category": "ram", "brand": "Corsair", "name": "Vengeance 16GB (2x8) DDR4-3200", "price": 45, "type": "DDR4", "capacityGB": 16 },
+  { "id": "ram-kingston-fury-32-ddr4-3200", "category": "ram", "brand": "Kingston", "name": "Fury Beast 32GB (2x16) DDR4-3200", "price": 75, "type": "DDR4", "capacityGB": 32 },
+  { "id": "ram-corsair-vengeance-16-ddr5-5600", "category": "ram", "brand": "Corsair", "name": "Vengeance 16GB (2x8) DDR5-5600", "price": 70, "type": "DDR5", "capacityGB": 16 },
+  { "id": "ram-gskill-ripjaws-s5-32-ddr5-6000", "category": "ram", "brand": "G.Skill", "name": "Ripjaws S5 32GB (2x16) DDR5-6000", "price": 105, "type": "DDR5", "capacityGB": 32 },
+  { "id": "ram-kingston-fury-64-ddr5-5600", "category": "ram", "brand": "Kingston", "name": "Fury Beast 64GB (2x32) DDR5-5600", "price": 190, "type": "DDR5", "capacityGB": 64 },
+
+  { "id": "gpu-rx7600-xfx", "category": "gpu", "brand": "XFX", "name": "Radeon RX 7600 Speedster SWFT 210", "price": 269, "lengthMm": 240, "tdpW": 165, "vramGB": 8, "gamingScore": 48, "workScore": 36 },
+  { "id": "gpu-rtx4060-msi", "category": "gpu", "brand": "MSI", "name": "GeForce RTX 4060 Ventus 2X", "price": 299, "lengthMm": 199, "tdpW": 115, "vramGB": 8, "gamingScore": 50, "workScore": 42 },
+  { "id": "gpu-rx7800xt-sapphire", "category": "gpu", "brand": "Sapphire", "name": "Radeon RX 7800 XT Pulse", "price": 499, "lengthMm": 280, "tdpW": 263, "vramGB": 16, "gamingScore": 74, "workScore": 58 },
+  { "id": "gpu-rtx4070super-asus", "category": "gpu", "brand": "ASUS", "name": "GeForce RTX 4070 SUPER Dual", "price": 599, "lengthMm": 267, "tdpW": 220, "vramGB": 12, "gamingScore": 72, "workScore": 66 },
+  { "id": "gpu-rtx4080super-gigabyte", "category": "gpu", "brand": "Gigabyte", "name": "GeForce RTX 4080 SUPER Gaming OC", "price": 999, "lengthMm": 340, "tdpW": 320, "vramGB": 16, "gamingScore": 88, "workScore": 82 },
+  { "id": "gpu-rtx4090-asus-rog", "category": "gpu", "brand": "ASUS", "name": "ROG Strix GeForce RTX 4090", "price": 1999, "lengthMm": 358, "tdpW": 450, "vramGB": 24, "gamingScore": 100, "workScore": 100 },
+
+  { "id": "sto-wd-sn580-500", "category": "storage", "brand": "WD", "name": "Blue SN580 500GB", "price": 40, "kind": "NVMe", "capacityGB": 500 },
+  { "id": "sto-crucial-p3-1tb", "category": "storage", "brand": "Crucial", "name": "P3 1TB", "price": 55, "kind": "NVMe", "capacityGB": 1000 },
+  { "id": "sto-samsung-990pro-2tb", "category": "storage", "brand": "Samsung", "name": "990 PRO 2TB", "price": 159, "kind": "NVMe", "capacityGB": 2000 },
+  { "id": "sto-crucial-mx500-1tb", "category": "storage", "brand": "Crucial", "name": "MX500 1TB", "price": 70, "kind": "SATA SSD", "capacityGB": 1000 },
+  { "id": "sto-seagate-barracuda-2tb", "category": "storage", "brand": "Seagate", "name": "BarraCuda 2TB", "price": 55, "kind": "HDD", "capacityGB": 2000 },
+
+  { "id": "psu-corsair-cv550", "category": "psu", "brand": "Corsair", "name": "CV550", "price": 65, "wattage": 550 },
+  { "id": "psu-corsair-rm750e", "category": "psu", "brand": "Corsair", "name": "RM750e", "price": 109, "wattage": 750 },
+  { "id": "psu-bequiet-pure-power-12m-850", "category": "psu", "brand": "be quiet!", "name": "Pure Power 12 M 850W", "price": 129, "wattage": 850 },
+  { "id": "psu-corsair-rm1000e", "category": "psu", "brand": "Corsair", "name": "RM1000e", "price": 169, "wattage": 1000 },
+
+  { "id": "case-cm-nr200p", "category": "case", "brand": "Cooler Master", "name": "NR200P", "price": 99, "maxGpuLengthMm": 336 },
+  { "id": "case-corsair-4000d-airflow", "category": "case", "brand": "Corsair", "name": "4000D Airflow", "price": 104, "maxGpuLengthMm": 360 },
+  { "id": "case-nzxt-h5-flow", "category": "case", "brand": "NZXT", "name": "H5 Flow", "price": 94, "maxGpuLengthMm": 365 },
+  { "id": "case-lianli-lancool-216", "category": "case", "brand": "Lian Li", "name": "Lancool 216", "price": 99, "maxGpuLengthMm": 392 }
+]
