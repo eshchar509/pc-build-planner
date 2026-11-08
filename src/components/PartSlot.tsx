@@ -4,7 +4,7 @@ import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
 import { CATEGORY_LABELS } from '../domain/categories'
-import { formatPrice } from '../domain/format'
+import { describePart, formatPrice } from '../domain/format'
 import type { Category, Part } from '../types/parts'
 
 interface PartSlotProps {
@@ -27,6 +27,9 @@ export default function PartSlot({ category, part, onChoose, onRemove }: PartSlo
               {part.brand} {part.name}
             </Typography>
             <Typography sx={{ color: 'primary.main' }}>{formatPrice(part.price)}</Typography>
+            <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+              {describePart(part)}
+            </Typography>
           </>
         ) : (
           <Typography sx={{ color: 'text.secondary' }}>No part selected</Typography>
