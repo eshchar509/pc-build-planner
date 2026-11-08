@@ -1,35 +1,47 @@
 import { useEffect } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import Alert from '@mui/material/Alert'
+import Box from '@mui/material/Box'
+import CircularProgress from '@mui/material/CircularProgress'
 import { useAppDispatch, useAppSelector } from './app/hooks'
+import Layout from './components/Layout'
 import { fetchCatalog } from './features/catalog/catalogSlice'
-import { buildReset, partSelected } from './features/currentBuild/currentBuildSlice'
-import { selectSelectedParts, selectTotalPrice } from './features/currentBuild/selectors'
+import BuilderPage from './pages/BuilderPage'
+import ComparePage from './pages/ComparePage'
+import NotFoundPage from './pages/NotFoundPage'
+import SavedBuildsPage from './pages/SavedBuildsPage'
+import SharedBuildPage from './pages/SharedBuildPage'
 
 export default function App() {
   const dispatch = useAppDispatch()
   const status = useAppSelector((state) => state.catalog.status)
   const error = useAppSelector((state) => state.catalog.error)
-  const count = useAppSelector((state) => state.catalog.ids.length)
-  const selected = useAppSelector(selectSelectedParts)
-  const total = useAppSelector(selectTotalPrice)
 
   useEffect(() => {
     dispatch(fetchCatalog())
   }, [dispatch])
 
-  return (
-    <div>
-      <h1>PC Build Planner</h1>
-      {status === 'loading' && <p>Loading catalog...</p>}
-      {status === 'failed' && <p>Error: {error}</p>}
-      {status === 'succeeded' && <p>Loaded {count} parts</p>}
+  if (status === 'failed') {
+    return <Alert severity="error">Failed to load the parts catalog: {error}</Alert>
+  }
 
-      {/* TEMP demo: will be removed when the real UI is built */}
-      <button onClick={() => dispatch(partSelected({ category: 'cpu', partId: 'cpu-ryzen5-7600' }))}>
-        Select Ryzen 5 7600
-      </button>
-      <button onClick={() => dispatch(buildReset())}>Reset</button>
-      <p>CPU: {selected.cpu?.name ?? 'none'}</p>
-      <p>Total: ${total}</p>
-    </div>
+  if (status !== 'succeeded') {
+    return (
+      <Box sx={{ display: 'grid', placeItems: 'center', minHeight: '100vh' }}>
+        <CircularProgress />
+      </Box>
+    )
+  }
+
+  return (
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index element={<BuilderPage />} />
+        <Route path="builds" element={<SavedBuildsPage />} />
+        <Route path="compare" element={<ComparePage />} />
+        <Route path="b/:code" element={<SharedBuildPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    </Routes>
   )
 }
