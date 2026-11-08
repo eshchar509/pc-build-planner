@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import catalogReducer from '../features/catalog/catalogSlice'
+import currentBuildReducer from '../features/currentBuild/currentBuildSlice'
 
 export const store = configureStore({
   reducer: {
     catalog: catalogReducer,
+    currentBuild: currentBuildReducer,
   },
 })
 
