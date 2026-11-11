@@ -23,7 +23,12 @@ function ScoreRow({ label, result, missing }: ScoreRowProps) {
       </Stack>
       {result ? (
         <Stack direction="row" spacing={2} sx={{ alignItems: 'center' }}>
-          <LinearProgress variant="determinate" value={result.score} sx={{ flex: 1, height: 8, borderRadius: 4 }} />
+          <LinearProgress
+            variant="determinate"
+            value={result.score}
+            aria-label={`${label} score`}
+            sx={{ flex: 1, height: 8, borderRadius: 4 }}
+          />
           <Typography variant="body2" sx={{ minWidth: 64, textAlign: 'right' }}>
             {result.score} / 100
           </Typography>

@@ -2,6 +2,8 @@ import Button from '@mui/material/Button'
 import Card from '@mui/material/Card'
 import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
+import Chip from '@mui/material/Chip'
+import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 import { CATEGORY_LABELS } from '../domain/categories'
 import { describePart, formatPrice } from '../domain/format'
@@ -16,12 +18,17 @@ interface PartSlotProps {
 }
 
 export default function PartSlot({ category, part, hasIssue = false, onChoose, onRemove }: PartSlotProps) {
+  const label = CATEGORY_LABELS[category]
+
   return (
     <Card variant="outlined" sx={hasIssue ? { borderColor: 'error.main' } : undefined}>
       <CardContent>
-        <Typography variant="overline" sx={{ color: 'text.secondary' }}>
-          {CATEGORY_LABELS[category]}
-        </Typography>
+        <Stack direction="row" sx={{ alignItems: 'center', justifyContent: 'space-between', minHeight: 28 }}>
+          <Typography variant="overline" sx={{ color: 'text.secondary' }}>
+            {label}
+          </Typography>
+          {hasIssue && <Chip size="small" color="error" label="Compatibility issue" />}
+        </Stack>
         {part ? (
           <>
             <Typography variant="h6">
@@ -37,9 +44,11 @@ export default function PartSlot({ category, part, hasIssue = false, onChoose, o
         )}
       </CardContent>
       <CardActions>
-        <Button onClick={onChoose}>{part ? 'Change' : 'Choose'}</Button>
+        <Button onClick={onChoose} aria-label={`${part ? 'Change' : 'Choose'} ${label}`}>
+          {part ? 'Change' : 'Choose'}
+        </Button>
         {part && (
-          <Button color="error" onClick={onRemove}>
+          <Button color="error" onClick={onRemove} aria-label={`Remove ${label}`}>
             Remove
           </Button>
         )}
