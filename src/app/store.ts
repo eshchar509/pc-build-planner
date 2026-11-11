@@ -1,5 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 import catalogReducer from '../features/catalog/catalogSlice'
+import compareReducer from '../features/compare/compareSlice'
 import currentBuildReducer from '../features/currentBuild/currentBuildSlice'
 import savedBuildsReducer from '../features/savedBuilds/savedBuildsSlice'
 import { saveBuilds } from '../features/savedBuilds/storage'
@@ -9,6 +10,7 @@ export const store = configureStore({
     catalog: catalogReducer,
     currentBuild: currentBuildReducer,
     savedBuilds: savedBuildsReducer,
+    compare: compareReducer,
   },
 })
 
