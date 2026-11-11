@@ -64,3 +64,5 @@ export interface PcCase extends BasePart {
 }
 
 export type Part = Cpu | Motherboard | Ram | Gpu | StorageDrive | Psu | PcCase
+// For each category, the exact part type that belongs to it (cpu -> Cpu, gpu -> Gpu, ...).
+export type PartsByCategory = { [C in Category]?: Extract<Part, { category: C }> }

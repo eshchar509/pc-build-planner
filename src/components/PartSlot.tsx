@@ -10,13 +10,14 @@ import type { Category, Part } from '../types/parts'
 interface PartSlotProps {
   category: Category
   part?: Part
+  hasIssue?: boolean
   onChoose: () => void
   onRemove: () => void
 }
 
-export default function PartSlot({ category, part, onChoose, onRemove }: PartSlotProps) {
+export default function PartSlot({ category, part, hasIssue = false, onChoose, onRemove }: PartSlotProps) {
   return (
-    <Card variant="outlined">
+    <Card variant="outlined" sx={hasIssue ? { borderColor: 'error.main' } : undefined}>
       <CardContent>
         <Typography variant="overline" sx={{ color: 'text.secondary' }}>
           {CATEGORY_LABELS[category]}

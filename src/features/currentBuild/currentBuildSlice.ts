@@ -25,9 +25,13 @@ const currentBuildSlice = createSlice({
     buildRenamed(state, action: PayloadAction<string>) {
       state.name = action.payload
     },
+    buildLoaded(state, action: PayloadAction<{ name: string; parts: Selection }>) {
+      state.name = action.payload.name
+      state.parts = action.payload.parts
+    },
     buildReset: () => initialState,
   },
 })
 
-export const { partSelected, partRemoved, buildRenamed, buildReset } = currentBuildSlice.actions
+export const { partSelected, partRemoved, buildRenamed, buildLoaded, buildReset } = currentBuildSlice.actions
 export default currentBuildSlice.reducer
